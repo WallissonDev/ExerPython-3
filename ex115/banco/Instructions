@@ -1,0 +1,35 @@
+def save_to_text_file(filename, content, mode='w'):
+    """
+    Saves the given content to a text file.
+
+    Args:
+        filename (str): The name of the file to save to.
+        content (str or list): The information to be saved. If a list of strings,
+                               each string will be written on a new line.
+        mode (str): The file opening mode ('w' for write, 'a' for append).
+                    Defaults to 'w' (write, overwriting existing content).
+    """
+    try:
+        with open(filename, mode) as file:w
+            if isinstance(content, list):
+                for item in content:
+                    file.write(str(item) + '\n')  # Convert to string and add newline
+            else:
+                file.write(str(content))  # Convert to string
+        print(f"Information successfully saved to '{filename}' in '{mode}' mode.")
+    except IOError as e:
+        print(f"Error saving to file '{filename}': {e}")
+
+# Example usage:
+# Save a single string
+save_to_text_file("my_data.txt", "This is some information to save.")
+
+# Append a new line
+save_to_text_file("my_data.txt", "This is an appended line.", mode='a')
+
+# Save a list of items
+my_list = ["Item 1", "Item 2", "Item 3"]
+save_to_text_file("list_data.txt", my_list)
+
+# Overwrite an existing file with new content
+save_to_text_file("my_data.txt", "New content overwriting previous data.")

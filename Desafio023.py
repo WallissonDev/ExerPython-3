@@ -1,0 +1,7 @@
+n1 = (input('Digite um valor : '))
+n2 = ' '.join(n1)
+n3 = n2.split()
+print('Unidade: ', n3[0:1])
+print('Dezena: ', n3[1:2])
+print('Centena: ', n3[2:3])
+print('Milhas: ', n3[3:4])

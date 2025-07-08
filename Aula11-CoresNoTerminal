@@ -1,0 +1,14 @@
+# ANSI - Escape Sequence
+# Usamos \033[m
+# Ex: \033m[style;text;backm
+#
+# No style escolhemos de 0,1,4,7 -> None, Bold, Underline, Negative
+# No text de 30 a 37 -> Colors
+# No back de 40 a 47 -> colors
+#
+\033[0;30;41m
+\033[4;33;44m
+\033[1;35;43m
+\033[30;42m #Se não colocar um dos padrões de estilo, ele considera o padrão terminal
+\033[m # Volta ao padrão do terminal
+\033[7;30m # Usando negativo na cor branca pra puxar preto.

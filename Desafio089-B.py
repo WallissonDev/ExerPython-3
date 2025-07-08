@@ -1,0 +1,27 @@
+alunos = list()
+notas = list()
+individual = list()
+composta = list()
+while True:
+    nome = str(input('Nome: '))
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: '))
+    alunos.append(nome)
+    alunos.append((nota1+nota2)/2)
+    notas.append(nota1)
+    notas.append(nota2)
+    individual.append(notas[:])
+    composta.append(alunos[:])
+    alunos.clear()
+    notas.clear()
+    continuar = str(input('Quer continuar? [S/N]: '))
+    if continuar in 'Nn':
+        break
+print('N         NOME            MEDIA    ')
+print('='*30)
+for p, c in enumerate(composta):
+     print(f'{p}      {c[0]:^10}           {c[1]:.1f}')
+print('='*30)
+print()
+escolha = int(input('CHECAR ALUNO INDIVIDUALMENTE DIGITE O [N]: '))
+print(f'O aluno {composta[escolha][0]} tirou : {individual[escolha]}')

@@ -1,0 +1,6 @@
+Nome = str(input('Nome Completo: ')).strip()
+print(f'Seu nome maiúsculo é: {Nome.upper()}')
+print(f'Seu nome minúsculo é: {Nome.lower()}')
+print(f'Seu nome tem: {len(Nome) - Nome.count(' ')}  Letras')
+# Minha Solução -> print(f'Seu primeiro nome: {Nome.split()[0]} tem: {len(Nome.split()[0])} Letras')
+print(f'Seu primeiro nome tem: {Nome.find(' ')} Letras')

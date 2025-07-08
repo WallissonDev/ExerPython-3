@@ -1,0 +1,7 @@
+n1 = input('Digite uma frase: ').strip()
+n2 = n1.count('A')
+n3 = n1.find('A')
+n4 = n1.rfind('A')
+print('Quantas vezes aparece A: ',n2 )
+print('Primeiro A na posição:', n3)
+print('Último A na posição: ', n4)

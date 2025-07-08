@@ -1,0 +1,5 @@
+Nome = str(input('Nome Completo: ')).strip()
+print('Seu nome em maiúsculas é:', Nome.upper())
+print('Seu nome em minúsculas é:', Nome.lower())
+print('Seu nome possui: ',Nome.strip(), 'Letras')
+print('Seu primeiro nome é: ', Nome.split()[0],'E tem: ', len(Nome.split()[0]),'Letras')

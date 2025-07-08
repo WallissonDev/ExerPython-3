@@ -1,0 +1,5 @@
+myL = str(input('Digite uma Frase: ')).strip()
+myS = str(input('Digite qual letra quer achar: ')).strip()
+print(f'Quantas vezes aparece a letra {myS} na frase: {myL.count(myS)}')
+print(f'Qual posição a letra {myS} aparece na primeira vez: {myL.find(myS)}')
+print(f'Qual a posição a letra {myS} aparece na ultima vez: {myL.rfind(myS)}')  
